@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Sales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .ice-cream-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .ice-cream-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .ice-cream-item h3 {
+            margin: 10px 0;
+            color: #ff69b4;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #ff1493;
+        }
+
+        footer {
+            background-color: #ff69b4;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .cart {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Ice Cream Heaven!</h1>
+        <div class="cart">
+            Cart: <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="ice-cream-item">
+            <img src="chocolate icecream.jpg" alt="Chocolate Ice Cream">
+            <h3>Chocolate Ice Cream</h3>
+            <p class="price">$4.99</p>
+            <button class="button" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="ice-cream-item">
+            <img src="vannilla icecream.jpg" alt="Vanilla Ice Cream">
+            <h3>Vanilla Ice Cream</h3>
+            <p class="price">$3.99</p>
+            <button class="button" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="ice-cream-item">
+            <img src="strawberry icecream.jpg" alt="Strawberry Ice Cream">
+            <h3>Strawberry Ice Cream</h3>
+            <p class="price">$4.49</p>
+            <button class="button" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="ice-cream-item">
+            <img src="mint ice cream.jpg" alt="Mint Ice Cream">
+            <h3>Mint Ice Cream</h3>
+            <p class="price">$4.29</p>
+            <button class="button" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ice Cream Heaven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+
+        function addToCart() {
+            cartCount++;
+            document.getElementById("cart-count").innerText = cartCount;
+        }
+    </script>
+</body>
+</html>
